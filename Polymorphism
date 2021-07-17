@@ -1,0 +1,41 @@
+Child class that inherits functions from parent class can override that function and give it new set of rules to follow.
+
+class Tiger:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def info(self):
+        print(f"I am a tiger. My name is {self.name}. I am {self.age} years old.")
+
+    def make_sound(self):
+        print("grrrr")
+
+
+class Lion:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def info(self):
+        print(f"I am a lion. My name is {self.name}. I am {self.age} years old.")
+
+    def make_sound(self):
+        print("roarrrr")
+
+
+tiger = Tiger("Jaya", 2.5)
+lion = Lion("Kira", 4)
+
+print(tiger.name)
+print(tiger.make_sound())
+print(lion.name)
+print(lion.make_sound())
+
+
+
+Output:
+Jaya
+grrrr
+Kira
+roarrrr
