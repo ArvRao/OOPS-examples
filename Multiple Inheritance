@@ -53,4 +53,6 @@ It is very caring
 10
 nike barks all the time
         
-        
+
+
+Note: Method Overloading, a way to create multiple methods with the same name but different arguments, is not possible in Python.
