@@ -1,0 +1,56 @@
+Classes can have more than one parent(super class)
+
+Child classes get all properties and attributes of parent classes.
+
+Example:
+class Dog:
+    def __init__(self, name, age):
+        self.name=name
+        self.age=age
+    
+    def bark(self):
+        return self.name + 'barks all the time'
+
+class Gold(Dog):
+    def __init__(self, name, age):
+        super().__init__(name,age)
+    
+    def bark(self):
+        return self.name + ' barks all the time'
+
+
+
+class Puggy(Dog):
+    def __init__(self, name, age):
+        super().__init__(name,age)
+        # self.height = height
+    
+    def caring(self):
+        return 'It is very caring'
+
+
+class Nike(Puggy, Gold):
+    def __init__(self, name, age, height=1):
+        super().__init__(name,age)
+        self.height = height
+    
+    def roar(self):
+        self.name + ' roars'
+
+
+Nike class gets data from both Puggy and Gold. Both are subclasses, if Dog had to be mentioned, there was no necissity in providing all of them.
+
+nike = Nike('nike', 3, 10)
+print(nike.name)
+print(nike.roar())
+print(nike.caring())
+print(nike.height)
+print(nike.bark())
+Output:
+nike
+None
+It is very caring
+10
+nike barks all the time
+        
+        
