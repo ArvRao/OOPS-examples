@@ -59,3 +59,7 @@ Note: Method Overloading, a way to create multiple methods with the same name bu
 
 *self keyword is used to access the attributes of that class. If you import other class object as arguments in class methods, don't use self keyword.
 Call by actual name
+
+
+We need to call parent initialization class (super class) before running attributes of subclass explicitly using super() method.
+Parent class is a generalized class that provides functionality that can be used in all child classes.
