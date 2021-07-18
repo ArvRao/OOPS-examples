@@ -1,0 +1,45 @@
+The self keyword is used to access the attributes of that class. If you import other class object as arguments in class methods, don't use self keyword.
+Call by actual name
+
+
+class Parent:
+    def __init__(self, name, age):
+        self.name=name
+        self.age=age
+
+class Child:
+    def __init__(self, name):
+        self.name=name
+        self.child_of = []
+    
+    def mchildof(self, parent):
+        if len(self.child_of) < 3:
+            self.child_of.append(parent)
+        print(self.child_of)
+
+    def age(self):
+        value = []
+        for child in self.child_of:
+            if child.age >31:
+                print(child.name, child.age)
+                value.append(child)
+        return value[0].name
+    
+p1 = Parent('Sunil',32)
+p2 = Parent('Nandini',30)
+c1 = Child('Karthik')
+# print(p1.name)
+c1.mchildof(p1)
+c1.mchildof(p2)
+# print(c1.child_of[1].name,c1.child_of[1].age)
+print(c1.age())
+# print(c1.mchild(p2))
+
+
+In this example, we're trying to add two parent object in a list of child object. No self keyword used here.
+
+Output:
+[<__main__.Parent object at 0x7feaa17e7d00>]
+[<__main__.Parent object at 0x7feaa17e7d00>, <__main__.Parent object at 0x7feaa17b2310>]
+Sunil 32
+Sunil
