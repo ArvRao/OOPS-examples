@@ -1,0 +1,42 @@
+There are properties that are only restricted to managers and not to others. But they share similar attributes like name, age.
+
+Upper level general class called Person that has all the general information
+
+Class methods don't act on single instance. It is called on the class and doesn't have access to instance and hence takes parameter as cls and decorator classmethod 
+to indicate it is class method.
+
+
+# parent class
+class Employee:
+    number_of_employees = 0
+    def __init__(self, id, name):
+        print("Hello from Employee.__init__()")
+        self.id = id
+        self.name = name
+        Employee.number_of_employees += 1
+
+    def employeeDetail(self):
+        print("ID: %s" %self.id)
+        print("Name: %s" %self.name)
+
+# child class
+class Manager(Employee):
+
+    def __init__(self, id, name, project):
+        super().__init__(id, name)
+        print("Hello from Manager.__init__()")
+        self.project = project
+
+    def projectDetail(self):
+        print("Project: %s" %self.project)
+
+
+# object of Manager class
+obj = Manager(1, 'Jane Doe', 'Android App')
+
+# output
+print("-----Manager Detail-----")
+obj.employeeDetail()
+
+print("-----Project Detail-----")
+obj.projectDetail()
