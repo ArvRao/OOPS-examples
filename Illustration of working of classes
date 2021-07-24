@@ -19,10 +19,10 @@ class Child:
 
     def age(self):
         value = []
-        for child in self.child_of:
-            if child.age >31:
-                print(child.name, child.age)
-                value.append(child)
+        for parent in self.child_of:    # object of Parent class
+            if parent.age >31:
+                print(parent.name, parent.age)
+                value.append(parent)
         return value[0].name
     
 p1 = Parent('Sunil',32)
