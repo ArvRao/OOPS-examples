@@ -38,7 +38,7 @@ class Nike(Puggy, Gold):
         self.name + ' roars'
 
 
-Nike class gets data from both Puggy and Gold. Both are subclasses, if Dog had to be mentioned, there was no necissity in providing all of them.
+Nike class gets data from both Puggy and Gold. Both are subclasses, if Dog had to be mentioned, there was no necessity in providing all of them.
 
 nike = Nike('nike', 3, 10)
 print(nike.name)
