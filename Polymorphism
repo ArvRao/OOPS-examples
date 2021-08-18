@@ -32,7 +32,7 @@ print(tiger.make_sound())
 print(lion.name)
 print(lion.make_sound())
 
-
+Here the attributes and methods of Tiger and Lion classes are changed with the same name.
 
 Output:
 Jaya
