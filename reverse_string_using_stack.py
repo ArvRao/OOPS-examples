@@ -31,7 +31,7 @@ def reverse_string(stack, input_str):
         
     rev_str = ""
     while not stack.is_empty():
-      #until the stack is empty, start popping all items
+      #until the stack is empty, start popping all items, done once the entire stack is completed
         rev_str += stack.pop()
     return rev_str
 
