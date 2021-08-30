@@ -28,10 +28,11 @@ def reverse_string(stack, input_str):
     for i in range(len(input_str)):
         stack.push(input_str[i])
 
+        
     rev_str = ""
     while not stack.is_empty():
+      #until the stack is empty, start popping all items
         rev_str += stack.pop()
-
     return rev_str
 
 stack = Stack()
