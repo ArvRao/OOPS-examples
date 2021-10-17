@@ -12,7 +12,7 @@ class Child:
         self.name=name
         self.child_of = []
     
-    def mchildof(self, parent):
+    def mchildof(self, parent): # parent can accept objects
         if len(self.child_of) < 3:
             self.child_of.append(parent)
         print(self.child_of)
